@@ -1,0 +1,15 @@
+Update and Install Netmiko on Network Automation Container
+(Connect the docker, first on NAT cloud)
+apt-get update
+pip3 install -U netmiko
+
+
+
+
+Assign Static address to Docker Network Automation Container
+Edit /etc/network/interfaces to:
+
+auto eth0
+iface eth0 inet static
+        address 192.168.1.69
+        netmask 255.255.255.0

@@ -1,0 +1,31 @@
+!The following configuration are use to connect the device to 
+!the network automation machine, which is in this case docker container
+!
+!
+! Generate SSH keys
+configure terminal
+hostname R1
+ip domain name cisco.corp
+crypto key generate rsa
+1024
+!
+!
+!
+! Enable the router to accept SSH sessions
+line vty 0 4
+login local
+transport input ssh
+!
+!
+! Create a level 15 user. Level 15 means the user has total control over the device
+! Privilege level 15 is needed by netmiko for it to work
+username cisco privilege 15 password 0 12345678
+!
+!
+!
+!This is the management interface
+interface GigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shut
+end
+!

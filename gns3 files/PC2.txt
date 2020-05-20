@@ -1,0 +1,12 @@
+!This is configuration changes the router into a simple device
+!No ip routing turns off the capabilities of the router to route packets 
+!thus making it into asimple workstation
+configure terminal
+hostname PC2
+no ip routing
+ip default-gateway 10.1.1.2
+int gig 0/0 
+ip address 10.1.1.3 255.255.255.0
+no shut
+end
+!
