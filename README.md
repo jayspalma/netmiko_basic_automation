@@ -16,6 +16,7 @@ To recreate the project:
     * Note: Files are commented that explains each command.
 3. Copy or create the files found on the 'netmiko files' directory to the Netmiko Automation docker.
     * **__It is imperative that the filename of the R1 and R2 files should not be changed.__**
+    * **__R1, R2 and basic_automation.py should be on the same directory .__**
 4. Run the the basic_automation.py by using the command "python3 basic_automation.py"
 
 ## To test if the configuration is successful, PC1 should be able to ping PC2. ##
